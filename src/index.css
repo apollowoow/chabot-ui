@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+.cb-widget-root {
+  all: initial; 
+  font-family: sans-serif;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+.cb-widget-root *, 
+.cb-widget-root ::before, 
+.cb-widget-root ::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+}
