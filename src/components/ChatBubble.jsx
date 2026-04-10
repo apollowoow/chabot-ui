@@ -1,4 +1,3 @@
-// src/components/ChatBubble.jsx
 export default function ChatBubble({ type, text, choices, onSelect, isLast }) {
   const isUser = type === 'user';
   
@@ -9,16 +8,13 @@ export default function ChatBubble({ type, text, choices, onSelect, isLast }) {
           ? 'cb:bg-blue-600 cb:text-white cb:rounded-tr-none' 
           : 'cb:bg-gray-100 cb:text-gray-800 cb:rounded-tl-none cb:border cb:border-gray-200'
       }`}>
-        {/* The Message Text */}
         <div className="cb:leading-relaxed">{text}</div>
 
-        {/* The Inline Actions (Only for Bot & only if choices exist) */}
         {!isUser && choices && choices.length > 0 && (
           <div className="cb:mt-4 cb:flex cb:flex-col cb:gap-2">
             {choices.map((choice) => (
               <button
                 key={choice.id}
-                // Disable if it's not the latest message to prevent logic breaks
                 disabled={!isLast}
                 onClick={() => onSelect(choice)}
                 className={`cb:w-full cb:text-left cb:px-3 cb:py-2 cb:rounded-lg cb:border cb:transition-all ${
