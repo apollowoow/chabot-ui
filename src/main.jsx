@@ -12,10 +12,20 @@ const reactRootContainer = document.createElement('div');
 reactRootContainer.id = 'chatbot-root';
 shadowRoot.appendChild(reactRootContainer);
 
-// Clones Vite styles into the Shadow DOM during development
-const styles = document.querySelectorAll('style[data-vite-dev-id]');
-styles.forEach(style => shadowRoot.appendChild(style.cloneNode(true)));
+
+const devStyles = document.querySelectorAll('style[data-vite-dev-id]');
+devStyles.forEach(style => shadowRoot.appendChild(style.cloneNode(true)));
+
+if (import.meta.env.PROD) {
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = './assets/index.css'; 
+  
+  shadowRoot.appendChild(link);
+}
 
 createRoot(reactRootContainer).render(
-  <StrictMode><App /></StrictMode>
+  <StrictMode>
+    <App />
+  </StrictMode>
 );
