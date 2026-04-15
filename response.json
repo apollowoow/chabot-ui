@@ -1,0 +1,138 @@
+{
+  "id": 1,
+  "query": "How may I help you today?",
+  "actions": [
+    {
+      "label": "I would like to access the status of my complaint",
+      "isForm": true,
+      "isSubmit": true,
+      "nextSequence": 0,
+      "form": {
+        "description": "Please input your email address and tracking number",
+        "fields": [
+          { 
+            "type": "email", 
+            "name": "email", 
+            "label": "EMAIL",
+            "value":"sample@gmail.com",
+            "required":true,
+            "disabled":true,
+            "option":[]
+          },
+          { 
+            "type": "text", 
+            "name": "tracking_number", 
+            "label": "TRACKING_NUMBER",
+            "value":"",
+            "required":true,
+            "disabled":false,
+            "option":[]
+          }
+        ]
+      }
+    },
+    {
+      "label": "I have a concern/inquiry",
+      "isForm": true,
+      "isSubmit": true,
+      "nextSequence": 0,
+      "form": {
+        "description": "Please input your email address and your concern:",
+        "fields": [
+          { 
+            "type": "email", 
+            "name": "email", 
+            "label": "EMAIL",
+            "value":"sample@gmail.com",
+            "required":true,
+            "disabled":true,
+            "option":[]
+          },
+          { 
+            "type": "text", 
+            "name": "text_area", 
+            "label": "",
+            "value":"",
+            "required":true,
+            "disabled":false,
+            "option":[]
+          }
+        ]
+      }
+    },
+    {
+      "label": "I would like to file a complaint",
+      "isForm": true,
+      "isSubmit": false,
+      "nextSequence": 2,
+      "form": {
+        "description": "",
+        "fields": [
+          { 
+            "type": "email", 
+            "name": "email", 
+            "label": "EMAIL",
+            "value":"sample@gmail.com",
+            "required":true,
+            "disabled":true,
+            "option":[]
+          },
+          { 
+            "type": "text", 
+            "name": "name", 
+            "label": "NAME",
+            "value":"Dela Cruz, Juan C.",
+            "required":true,
+            "disabled":true,
+            "option":[]
+          },
+          { 
+            "type": "text", 
+            "name": "address", 
+            "label": "ADDRESS",
+            "value":"1158, Chino Roces Avenue",
+            "required":true,
+            "disabled":true,
+            "option":[]
+          },
+          { 
+            "type": "number", 
+            "name": "contact_no", 
+            "label": "CONTACT_NUMBER",
+            "value":"1158, Chino Roces Avenue",
+            "required":true,
+            "disabled":true,
+            "option":[]
+          },
+          { 
+            "type": "select", 
+            "name": "social_class", 
+            "label": "SOCIAL_CLASSIFICATION",
+            "value":"Abled",
+            "required":true,
+            "disabled":true,
+            "option":["Abled", "Person with Disablities"]
+          },
+          { 
+            "type": "select", 
+            "name": "age_bracket", 
+            "label": "AGE_BRACKET",
+            "value":"25-34",
+            "required":true,
+            "disabled":true,
+            "option":["18-24", "25-34", "35-44", "45-54", "55+"]
+          },
+          { 
+            "type": "file", 
+            "name": "valid_id", 
+            "label": "VALID_ID",
+            "value":"valid_id.jpg",
+            "required":true,
+            "disabled":true,
+            "option":[]
+          }
+        ]
+      }
+    }
+  ]
+}
