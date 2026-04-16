@@ -14,4 +14,12 @@ export default defineConfig({
       },
     },
   },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://api-chatbot.f-dci.com',
+        changeOrigin: true,
+      }
+    }
+  }
 })

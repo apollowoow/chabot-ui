@@ -1,8 +1,12 @@
 export default function TypingIndicator() {
   return (
     <div className="cb:flex cb:items-start cb:gap-2 cb:mb-4">
-      <div className="cb:w-7 cb:h-7 cb:rounded-full cb:bg-blue-600 cb:flex cb:items-center cb:justify-center cb:shrink-0">
-        <span className="cb:text-white cb:text-[10px] cb:font-bold">AI</span>
+      <div className="cb:w-7 cb:h-7 cb:rounded-full  cb:flex cb:items-center cb:justify-center cb:shrink-0">
+         <img 
+          src="/odrs-logo.png" 
+          alt="ODRS Logo" 
+          className="cb:w-6 cb:h-6 cb:object-contain" 
+          />
       </div>
 
       <div className="cb:flex cb:items-start">
